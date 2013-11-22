@@ -4,13 +4,6 @@
 .layout-landing {
   padding-top: 90px;
 }
-
-// Headings
-#{headings()} {
-  @extend %heading-font;
-  color: $base-strong-color;
-}
-
 // Utilitie Styles
 .vertical-center {
   @extend %vertical-center-container;
