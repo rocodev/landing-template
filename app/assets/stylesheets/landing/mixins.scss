@@ -1,0 +1,54 @@
+@import "variables";
+
+// Style Placeholders
+%heading-font {
+  font-family: $heading-font;
+  font-weight: 600;
+}
+
+%self-clear {
+  zoom: 1; /* IE6&7 */
+
+  &:before, &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+%vertical-center-container {
+  font-size: 0;
+
+  &:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+  }
+  %vertical-center-inner {
+    font-size: $base-font-size;
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+%justify-grid-list {
+  font-size: 0;
+  text-align: justify;
+
+  %justify-grid-item, .placeholder {
+    font-size: $base-font-size;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+// Functions
+@function relative-size($target-size, $base-size: $base-font-size, $unit: 1em) {
+  @return ($target-size / $base-size) * $unit;
+}
+
+// Mixins
+
