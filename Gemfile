@@ -34,6 +34,7 @@ gem "anjlab-bootstrap-rails", "2.3.1.2", :require => "bootstrap-rails"
 gem "bootstrap_helper", ">= 4.2.2.1"
 gem "simple_form", "~> 3.0.0.rc"
 gem "will_paginate", "3.0.3"
+gem "font-awesome-rails"
 
 gem "high_voltage"
 
