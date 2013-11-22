@@ -7,7 +7,8 @@
   padding: 0;
 
   .feature {
-    margin: 40px 0;
+    margin-top: 40px;
+    margin-bottom: 40px;
   }
   .feature-title {
     font-size: 20px;
@@ -23,5 +24,23 @@
   .feature-title,
   .feature-desc {
     margin-left: 80px;
+  }
+}
+
+.feature-list.small-header {
+  .feature-title {
+    font-size: 18px;
+    line-height: 20px;
+  }
+}
+
+.feature-list.small-header.with-icon {
+  .feature-icon {
+    width: 25px;
+    margin-top: 0;
+  }
+  .feature-title,
+  .feature-desc {
+    margin-left: 35px;
   }
 }
