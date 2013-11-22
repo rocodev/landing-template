@@ -1,23 +1,23 @@
-<%= render :partial => "landing/hero_block" %>
+<div class="page-welcome">
 
-<div class="landing-section landing-features">
-  <div class="container">
-    <h3 class="hide">Features</h3>
+  <%= render :partial => "landing/hero_block" %>
 
-    <div class="row-fluid row-inline align-middle">
-      <div class="span6">
-        <%= render :partial => "landing/welcome/feature_list_vertical" %>
-      </div>
-      <div class="span6">
-        <div class="landing-screenshot">
-          <%= image_tag("img-landing-screenshot.png", :alt => "CommonQ Demo Screenshot") %>
-          <%#= link_to("View Live Demo", "#demo", :class => "btn btn-live-demo") %>
+  <div class="landing-section landing-features">
+    <div class="container">
+      <h2 class="hide">Features</h2>
+
+      <div class="row-fluid row-inline align-middle">
+        <div class="span6">
+          <%= render :partial => "landing/welcome/feature_list_vertical" %>
+        </div>
+        <div class="span6">
+          <div class="landing-screenshot">
+            <%= image_tag("img-landing-screenshot.png", :alt => "CommonQ Demo Screenshot") %>
+            <%#= link_to("View Live Demo", "#demo", :class => "btn btn-live-demo") %>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 
-<div class="span12">
-	<h1> Welcome </h1>
 </div>
