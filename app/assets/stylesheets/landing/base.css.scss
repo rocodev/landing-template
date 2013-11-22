@@ -4,11 +4,3 @@
 .layout-landing {
   padding-top: 90px;
 }
-// Utilitie Styles
-.vertical-center {
-  @extend %vertical-center-container;
-
-  .center-inner {
-    @extend %vertical-center-inner;
-  }
-}

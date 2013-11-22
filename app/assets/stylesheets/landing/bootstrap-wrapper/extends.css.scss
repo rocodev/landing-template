@@ -1,0 +1,13 @@
+@import "../mixins";
+
+// Vertical-centered Modules
+// -------------------------
+
+// For centering the unknown
+.vertical-center {
+  @extend %vertical-center-container;
+
+  .center-inner {
+    @extend %vertical-center-inner;
+  }
+}
