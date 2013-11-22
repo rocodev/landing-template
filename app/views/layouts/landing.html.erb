@@ -21,14 +21,12 @@
   <div class="layout-landing">
     <%= render :partial => "landing/menu" %>
 
-    <div class="container-fluid">
+    <div class="container">
       <%= notice_message %>
+    </div>
 
-      <div class="content">
-        <div class="row-fluid">
-          <%= yield %>
-        </div>
-      </div>
+    <div class="site-content">
+      <%= yield %>
     </div>
 
     <div class="container">
