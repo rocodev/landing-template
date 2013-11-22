@@ -4,3 +4,14 @@ $baseFontSize: $base-font-size;
 $sansFontFamily: $base-font;
 $textColor: $base-color;
 $linkColor: $link-color;
+
+// Component sizing
+// ----------------
+$paddingLarge: 14px 19px; // 50px
+$paddingSmall: 4px 10px;  // 30px
+$paddingMini:  0 6px;   // 22px
+
+// Buttons
+// ----------------
+$btnSuccessBackground:          #6BBD3F;
+$btnSuccessBackgroundHighlight: #058A2C;
