@@ -1,0 +1,67 @@
+@import "../variables";
+@import "compass/css3/border-radius";
+@import "compass/css3/transition";
+@import "compass/css3/box-sizing";
+
+%menu-item-hover {
+  color: $menu-fg-color;
+  background-color: $menu-hover-bg-color;
+}
+%menu-item {
+  color: $menu-fg-color;
+  line-height: $menu-height;
+  text-decoration: none;
+  padding: 0 $menu-padding;
+  @include transition(150ms);
+
+  &:hover, &:focus {
+    @extend %menu-item-hover;
+  }
+}
+
+.landing-menu {
+  width: 100%;
+  height: $menu-height;
+  background-color: $menu-bg-color;
+  line-height: $menu-height;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  -webkit-font-smoothing: subpixel-antialiased;
+  @include box-sizing(border-box);
+
+  .brand {
+    @extend %menu-item;
+    font-size: 28px;
+    margin-left: -$menu-padding;
+  }
+
+  .nav-pills {
+    &:last-child {
+      margin-right: -$menu-padding;
+    }
+
+    & > li > a {
+      @extend %menu-item;
+    }
+    & > li {
+      position: relative;
+      z-index: 5;
+    }
+    & > li.active {
+      z-index: 1;
+
+      & > a:hover, & > a:focus {
+        background-color: $link-color;
+      }
+    }
+
+    a {
+      font-size: 20px;
+      font-weight: 300;
+      margin: 0 0 0 ($menu-padding * -0.5);
+      @include border-radius(0);
+    }
+  }
+}
