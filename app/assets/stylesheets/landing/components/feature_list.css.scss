@@ -1,0 +1,19 @@
+@import "../variables";
+@import "../mixins";
+
+.feature-list.with-icon {
+  .feature {
+    margin: 40px 0;
+  }
+  .feature-icon {
+    margin-top: 10px;
+    float: left;
+  }
+  .feature-title,
+  .feature-desc {
+    margin-left: 80px;
+  }
+  .feature-title {
+    font-size: 20px;
+  }
+}
