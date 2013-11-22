@@ -11,3 +11,24 @@
     @extend %vertical-center-inner;
   }
 }
+
+// An inline-row that vertical-aligned
+.row, .row-fluid {
+  &.row-inline {
+    font-size: 0;
+
+    [class^=span] {
+      font-size: $baseFontSize;
+      display: inline-block;
+      vertical-align: top;
+      float: none;
+    }
+
+    &.align-middle [class^=span] {
+      vertical-align: middle;
+    }
+    &.align-bottom [class^=span] {
+      vertical-align: bottom;
+    }
+  }
+}
