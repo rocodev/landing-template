@@ -34,7 +34,7 @@
   }
 }
 
-.feature-list.small-header.with-icon {
+.feature-list.small-icon.with-icon {
   .feature-icon {
     width: 25px;
     margin-top: 0;
@@ -42,5 +42,20 @@
   .feature-title,
   .feature-desc {
     margin-left: 35px;
+  }
+}
+
+.feature-list.duo-columns {
+  @extend %justify-grid-list;
+  width: relative-size($section-narrow-width, 940px, 100%);
+  margin-left: auto;
+  margin-right: auto;
+
+  .feature, .placeholder {
+    width: relative-size(340px, $section-narrow-width, 100%);
+  }
+  .feature {
+    @extend %justify-grid-item;
+    margin: 0 0 10px;
   }
 }
