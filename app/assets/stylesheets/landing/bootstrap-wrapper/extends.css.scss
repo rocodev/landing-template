@@ -1,5 +1,11 @@
 @import "../mixins";
 
+// Additional Default Styles
+// -------------------------
+video {
+  @extend img;
+}
+
 // Vertical-centered Modules
 // -------------------------
 

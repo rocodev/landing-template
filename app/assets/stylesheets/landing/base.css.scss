@@ -1,7 +1,30 @@
 @import "mixins";
+@import "compass/css3/box-shadow";
+
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700|PT+Sans:400,700);
 
 .layout-landing {
   background-image: image-url("images/white_wall_hash.png");
   padding-top: 90px;
+}
+.poly-theater {
+  margin: 20px auto;
+}
+
+
+// Shares Styles
+// -------------
+.group {
+  @extend %self-clear;
+}
+.with-shadow {
+  @include box-shadow(0 2px 6px rgba(0,0,0,.5));
+}
+
+.figure-image {
+  text-align: center;
+
+  img {
+    margin-bottom: 10px;
+  }
 }
