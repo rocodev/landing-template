@@ -4,9 +4,13 @@
 .landing-section {
   padding: 40px 0;
 
+  & + & {
+    border-top: 1px solid $section-bg-color;
+  }
+
   &.section-expanded {
-    margin-left: -20px;
-    margin-right: -20px;
+    //margin-left: -20px;
+    //margin-right: -20px;
   }
   &.section-filled {
     @extend .section-expanded;
