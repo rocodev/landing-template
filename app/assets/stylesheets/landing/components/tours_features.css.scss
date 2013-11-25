@@ -1,0 +1,19 @@
+@import "../mixins";
+@import "compass/css3/columns";
+
+.tours-features .features-list {
+  width: 760px;
+  margin: 40px auto 0;
+  @include columns(360px 2);
+
+  a {
+    color: inherit;
+    display: list-item;
+  }
+
+  li {
+    margin-left: 1.2em;
+    margin-bottom: 10px;
+    display: inline-block;
+  }
+}
