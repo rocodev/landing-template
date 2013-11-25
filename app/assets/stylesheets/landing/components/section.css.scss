@@ -1,0 +1,28 @@
+@import "../mixins";
+@import "compass/css3/box-shadow";
+
+.landing-section {
+  padding: 40px 0;
+
+  &.section-expanded {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+  &.section-filled {
+    @extend .section-expanded;
+    background-color: $section-bg-color;
+  }
+
+  .section-title {
+    @extend %heading-font;
+    font-size: 36px;
+    line-height: 40px;
+    text-align: center;
+    text-shadow: 0 1px 1px #fff;
+    margin: 0 0 40px;
+  }
+
+  .with-shadow {
+    @include box-shadow(0 2px 6px rgba(0,0,0,.5));
+  }
+}
