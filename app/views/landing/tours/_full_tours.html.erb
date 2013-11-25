@@ -1,0 +1,18 @@
+
+  <div class="landing-section section-filled tours-features">
+    <h3 class="section-title"> Full Features </h3>
+
+    <%=
+      render_list :class => "features-list" do |li|
+        li << link_to("Revolutionary Editor with in-editor Preview", "/tours" )
+        li << link_to("Drag & Drop in-line image uploading", "/tours/image_uploader" )
+        li << link_to("Control your content with Public / Private / Draft options", "/tours/publish_state" )
+        li << link_to("Github Flavored Markdown, Latex ( Mathjax )", "/tours/markdown_latex" )
+        li << link_to("Octopres / Wordpress / Tumblr / Blogger / MT easy import/export", "/tours/importing_exporting" )
+        li << link_to("Custom Domain & Custom URL. Keep it compatible with old blogs
+", "/tours/custom_domain_url" )
+        li << link_to("Choose from Themes or custom HTML", "/tours/custom_themes" )
+      end
+    %>
+
+  </div>

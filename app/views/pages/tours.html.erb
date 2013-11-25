@@ -1,11 +1,55 @@
 <div class="page-tours">
   <div class="container">
     <%= render :partial => "landing/tours/header_nav" %>
-  </div>
-</div>
-<div class="landing-section">
-  <div class="container">
-    <h2>Tours</h2>
-  </div>
-</div>
 
+    <div class="landing-section mid-padding tours-content editor-tour">
+
+      <h3 class="section-title">
+        Revolutionary Editor with in-editor Preview
+      </h3>
+
+      <figure class="tours-figure">
+        <%= image_tag("tours/editor.png", :class => "with-shadow main-image") %>
+
+        <ul class="unstyled figure-notes">
+
+          <li class="note left note-slug">
+            <strong class="hide note-title">Title and Slug</strong>
+            <span class="note-desc">
+              customize title & slug.
+            </span>
+          </li>
+
+          <li class="note left note-highlight">
+            <strong class="hide note-title">Auto Highlight</strong>
+            <span class="note-desc">
+              highlight syntax.
+            </span>
+          </li>
+
+          <li class="note right note-in-editor">
+            <strong class="hide note-title">In-editor Preview</strong>
+            <span class="note-desc">
+              ⌘ E / ⌘ D <br>easily switches between edit/in-editor preview mode.
+
+            </span>
+          </li>
+
+          <li class="note right note-in-blog">
+            <strong class="hide note-title">Preview in Blog</strong>
+            <span class="note-desc">
+              Or preview post in blog layout
+            </span>
+          </li>
+        </ul>
+      </figure>
+
+      <p>
+        Supports GitHub Flavored Markdown, Latex in-editor preview, with the most handy image uploading interfaces. Never feel that easy blogging with code blocks, tables, and even math equations. Auto detect changes and enable prevent window closing to save your draft thoughts in last seconds.
+      </p>
+
+    </div>
+  </div>
+
+  <%= render :partial => "landing/tours/full_tours" %>
+</div>
