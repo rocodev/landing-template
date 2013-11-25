@@ -1,1 +1,73 @@
-<h2>Explore</h2>
+<div class="page-explore">
+  <div class="landing-section section-filled landing-explore-posts">
+    <div class="container">
+
+      <h3 class="section-title">Explore Logdown</h3>
+
+      <%= render_list :class => "nav nav-inline-pills explore-posts-nav" do |li|
+        li  << link_to("Hot Today", "/explore")
+        li  << link_to("Hot this Week", "/explore/week")
+        li  << link_to("Hot this Month", "/explore/month")
+      end %>
+
+      <div class="explore-rss-link text-right">
+        <a href="http://feeds.feedburner.com/logdown/hot_today" target="_blank"><i class="icon-rss-sign"></i><span> RSS</span></a>
+      </div>
+
+      <ul class="unstyled explore-posts-list">
+        <li class="first group explore-post">
+          <div class="post-content">
+            <a href="http://blog.xdite.net/posts/2013/11/25/hipster-ceo" class="post-title" target="_blank">想創業當 CEO 嗎？Hipster CEO 滿足你的願望</a>
+
+            <p class="post-desc">
+
+              昨天跑去 StartupWeekend #9 當 Judge。席間結識了一位 Mentor: Roger。在評審前說明會閒聊時，Roger 介紹了我們一款遊戲 Hipster CEO，說是一...</p>
+
+              <p class="post-meta">
+                2013-11-25 |
+                by xdite
+                on <a href="http://blog.xdite.net">Blog.XDite.net</a>
+              </p>
+            </div>
+          </li>
+          <li class="group explore-post">
+            <div class="post-content">
+              <a href="http://9way.logdown.com/posts/161505-1125-reasonable-quickly-level-up" class="post-title" target="_blank">1125 合理的越級挑戰</a>
+
+              <p class="post-desc">前幾天剛好看到 Mr. Jamie 寫了一篇「越級挑戰」是進步最快的方法。
+
+                我再說一次，我不反對越級挑戰這類的壓力訓練法，甚至我本身一直都是在這樣惡整自己的，但是很多時候這樣的風險真的過高。像...</p>
+
+                <p class="post-meta">
+                  2013-11-25 |
+                  by 9way
+                  on <a href="http://9way.logdown.com">9way's Blog</a>
+                </p>
+              </div>
+            </li>
+            <li class="last group explore-post">
+              <div class="post-content">
+                <a href="http://gogonngogo-blog.logdown.com/posts/162201-ps-01" class="post-title" target="_blank">ps 01</a>
+
+                <p class="post-desc">ctrl+t 變形
+                  去背
+                  鋼筆 筆型工具 &gt;
+                  ctrl+alt+z 退回
+                  alt+節點 刪除曲線
+                  路徑 &gt; 選取路徑
+
+                  ctrl+j 將選取路徑建立新圖層
+                  ctrl...</p>
+
+                  <p class="post-meta">
+                    2013-11-25 |
+                    by gogoNNgogo
+                    on <a href="http://gogonngogo-blog.logdown.com">gogoNNgogo</a>
+                  </p>
+                </div>
+              </li>
+            </ul>
+
+    </div>
+  </div>
+</div>

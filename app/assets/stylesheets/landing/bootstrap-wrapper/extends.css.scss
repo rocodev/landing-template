@@ -38,3 +38,31 @@ video {
     }
   }
 }
+
+// Additional Components
+// ---------------------
+.nav-inline-pills {
+  margin: 20px 0;
+
+  li {
+    display: inline-block;
+  }
+
+  li > a  {
+    padding: 5px 10px;
+    border-radius: 4px;
+    display: block;
+
+    &:hover {
+      background-color: rgba(255,255,255,.5);
+    }
+  }
+
+  .active > a {
+    color: #fff;
+
+    &, &:hover {
+      background-color: $linkColor;
+    }
+  }
+}

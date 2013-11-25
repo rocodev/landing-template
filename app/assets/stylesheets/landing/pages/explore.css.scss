@@ -1,0 +1,73 @@
+@import "../mixins";
+@import "compass/css3/transition";
+@import "compass/css3/box-shadow";
+
+.page-explore {
+  margin-top: -90px;
+
+  .section-filled {
+    padding-top: 90px + 40px;
+    padding-bottom: 40px;
+  }
+
+  .explore-navbar {
+    border-bottom: none;
+  }
+
+  .explore-rss-link,
+  .explore-posts-list {
+    width: 760px;
+    margin: -20px auto;
+  }
+
+  .explore-rss-link a {
+    color: $orange;
+  }
+
+  .explore-posts-list {
+    margin-bottom: 40px;
+  }
+
+  .pagination {
+    ul, li, li > a {
+      @include box-shadow(none);
+    }
+    li > a {
+      background-color: transparent;
+    }
+  }
+}
+
+.explore-posts-nav {
+  text-align: center;
+  margin: -5px 0 55px;
+
+  li > a {
+    color: #555;
+  }
+  .active > a {
+    &, &:hover { background-color: transparentize($red-dark, .1); }
+  }
+}
+
+.explore-post {
+  padding: 20px 0 10px;
+
+  & + & {
+    border-top: 1px solid darken(white, 20%);
+  }
+
+  .post-title {
+    font: 18px $heading-font;
+    margin-bottom: 10px;
+    display: block;
+  }
+  .post-meta {
+    font-size: 14px;
+
+    a { text-decoration: underline; }
+  }
+  .post-desc, .post-meta, .post-meta a {
+    color: #666;
+  }
+}
