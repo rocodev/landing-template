@@ -1,0 +1,17 @@
+@import "../mixins";
+@import "compass/css3/box-shadow";
+
+.tours-header-nav {
+  @extend %self-clear;
+  border-bottom: 1px solid $base-border-color;
+  padding-bottom: 20px;
+
+  @include box-shadow(0 1px #fff);
+
+  .header-nav-title {
+    text-align: center;
+    line-height: 50px;
+    text-transform: uppercase;
+    margin: 0;
+  }
+}
