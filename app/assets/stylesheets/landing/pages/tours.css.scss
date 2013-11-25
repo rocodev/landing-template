@@ -1,0 +1,20 @@
+@import "../mixins";
+
+.page-tours {
+
+}
+
+.tours-content.editor-tour {
+  .note-slug {
+    @include tours-figure-note(84px, 58px);
+  }
+  .note-highlight {
+    @include tours-figure-note(215px, 70px);
+  }
+  .note-in-editor {
+    @include tours-figure-note(97px, 58px);
+  }
+  .note-in-blog {
+    @include tours-figure-note(218px, 58px);
+  }
+}

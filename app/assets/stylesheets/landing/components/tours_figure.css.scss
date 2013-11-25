@@ -1,0 +1,52 @@
+@import "../mixins";
+
+.tours-figure {
+  margin: 40px 0;
+  position: relative;
+
+  & ~ p {
+    width: $tours-content-width;
+    margin: 10px auto;
+  }
+
+  .main-image {
+    width: $tours-content-width;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .note {
+    width: 134px;
+    font-size: 90%;
+    line-height: 18px;
+    display: block;
+    padding: 0 6px;
+    position: absolute;
+
+    &:before, &:after {
+      content: '';
+      display: block;
+      position: absolute;
+    }
+    &:before {
+      height: 0;
+      border-bottom: 1px solid;
+      top: 9px;
+    }
+    &:after {
+      width: 0;
+      border-left: 1px solid;
+    }
+
+    &.left {
+      text-align: right;
+      left: 0;
+      &:before { left: 100%; }
+    }
+    &.right {
+      right: 0;
+      &:before { right: 100%; }
+    }
+
+  }
+}

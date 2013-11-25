@@ -51,4 +51,9 @@
 }
 
 // Mixins
-
+@mixin tours-figure-note($top, $line-length: 0px) {
+  top: $top;
+  &:before {
+    width: $line-length;
+  }
+}
