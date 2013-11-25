@@ -1,4 +1,27 @@
 @import "variables";
+@import "compass/css3/images";
+
+// Functions
+@function relative-size($target-size, $base-size: $base-font-size, $unit: 1em) {
+  @return ($target-size / $base-size) * $unit;
+}
+
+// Mixins
+@mixin tours-figure-note($top, $line-length: 0px) {
+  top: $top;
+  &:before {
+    width: $line-length;
+  }
+}
+
+@mixin curved-shadow-background($direction, $color-stops...) {
+  $vertical-position: opposite-position($direction);
+
+  @include background-image(
+    radial-gradient($vertical-position center, farthest-side, $color-stops)
+  );
+  background-image: radial-gradient(farthest-side at $vertical-position center, $color-stops);
+}
 
 // Style Placeholders
 %heading-font {
@@ -45,15 +68,27 @@
   }
 }
 
-// Functions
-@function relative-size($target-size, $base-size: $base-font-size, $unit: 1em) {
-  @return ($target-size / $base-size) * $unit;
-}
+%section-concaved {
+  position: relative;
+  @include background-image(
+    linear-gradient(right, transparent, rgba(0,0,0,.05), transparent)
+  );
+  background-image: linear-gradient(to right, transparent, rgba(0,0,0,.05), transparent);
 
-// Mixins
-@mixin tours-figure-note($top, $line-length: 0px) {
-  top: $top;
+  &:before, &:after {
+    content: '';
+    width: 100%;
+    height: 5px;
+    display: block;
+    position: absolute;
+    left: 0;
+  }
   &:before {
-    width: $line-length;
+    @include curved-shadow-background(bottom, rgba(0,0,0,.3), transparent);
+    top: -1px;
+  }
+  &:after {
+    @include curved-shadow-background(top, rgba(0,0,0,.3), transparent);
+    bottom: -1px;
   }
 }
