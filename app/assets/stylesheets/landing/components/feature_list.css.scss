@@ -1,6 +1,7 @@
 @import "../variables";
 @import "../mixins";
 
+// Normal Feature List
 .feature-list {
   list-style: none;
   margin-left: 0;
@@ -11,51 +12,70 @@
     margin-bottom: 40px;
   }
   .feature-title {
-    font-size: 20px;
-  }
-}
-
-.feature-list.with-icon {
-  .feature-icon {
-    width: 60px;
-    margin-top: 10px;
-    float: left;
-  }
-  .feature-title,
-  .feature-desc {
-    margin-left: 80px;
-  }
-}
-
-.feature-list.small-header {
-  .feature-title {
     font-size: 18px;
     line-height: 20px;
   }
+
+  &.with-icon {
+    .feature-icon {
+      width: 50px;
+      margin-top: 10px;
+      float: left;
+    }
+    .feature-title,
+    .feature-desc {
+      margin-left: 60px;
+    }
+  }
 }
 
-.feature-list.small-icon.with-icon {
-  .feature-icon {
-    width: 25px;
-    margin-top: 0;
+// Larger Feature List
+.feature-list.large-type {
+  .feature-title {
+    font-size: 20px;
   }
-  .feature-title,
-  .feature-desc {
-    margin-left: 35px;
+
+  &.with-icon {
+    .feature-icon {
+      width: 60px;
+    }
+    .feature-title,
+    .feature-desc {
+      margin-left: 80px;
+    }
   }
 }
 
+// Feature List with small icon
+.feature-list.small-icon {
+  &.with-icon {
+    .feature-icon {
+      width: 25px;
+    }
+    .feature-title,
+    .feature-desc {
+      margin-left: 35px;
+    }
+  }
+}
+
+// Feature list with 2 columns
 .feature-list.duo-columns {
-  @extend %justify-grid-list;
+  @extend %self-clear;
   width: relative-size($section-narrow-width, 940px, 100%);
-  margin-left: auto;
-  margin-right: auto;
+  margin: 40px auto 10px;
 
-  .feature, .placeholder {
-    width: relative-size(340px, $section-narrow-width, 100%);
-  }
   .feature {
-    @extend %justify-grid-item;
-    margin: 0 0 10px;
+    width: relative-size(350px, $section-narrow-width, 100%);
+    margin: 0 0 20px;
+    float: left;
+
+    &:nth-child(odd) {
+      margin-right: relative-size(20px, $section-narrow-width, 100%);
+    }
+  }
+  .feature-title {
+    margin-top: 0;
+    margin-bottom: 5px;
   }
 }
