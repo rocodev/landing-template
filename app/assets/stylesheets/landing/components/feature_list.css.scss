@@ -66,14 +66,24 @@
   margin: 40px auto 10px;
 
   .feature {
-    width: relative-size(350px, $section-narrow-width, 100%);
-    margin: 0 0 20px;
+    width: relative-size(340px, $section-narrow-width, 100%);
+    margin: 0 0 30px;
     float: left;
 
     &:nth-child(odd) {
-      margin-right: relative-size(20px, $section-narrow-width, 100%);
+      margin-right: relative-size(40px, $section-narrow-width, 100%);
+    }
+    &:nth-last-of-type(1):nth-of-type(odd),  //only one at last row
+    &:nth-last-of-type(1):nth-of-type(even), //at the right of last row
+    &:nth-last-of-type(2):nth-of-type(odd) { //at the left of last row
+      margin-bottom: 0;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
     }
   }
+
   .feature-title {
     margin-top: 0;
     margin-bottom: 5px;
