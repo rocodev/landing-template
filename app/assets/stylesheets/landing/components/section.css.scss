@@ -2,19 +2,22 @@
 @import "compass/css3/box-shadow";
 
 .landing-section {
-  padding: 40px 0;
+  padding: $section-padding 0;
 
   & + & {
     border-top: 1px solid $section-bg-color;
   }
 
-  &.section-expanded {
-    //margin-left: -20px;
-    //margin-right: -20px;
-  }
   &.section-filled {
-    @extend .section-expanded;
     background-color: $section-bg-color;
+  }
+  &.mid-padding, &.slim-body {
+    padding-top: ($section-padding/2);
+    padding-bottom: ($section-padding/2);
+  }
+  &.zero-padding {
+    padding-top: 0;
+    padding-bottom: 0;
   }
 
   .section-title {

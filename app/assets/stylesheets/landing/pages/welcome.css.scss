@@ -15,6 +15,10 @@
     }
   }
 
+  .landing-features {
+    padding: 40px 0;
+  }
+
   .landing-screenshot {
     text-align: center;
 
@@ -31,6 +35,9 @@
     .editor-demo + p {
       width: 720px;
       margin: 40px auto;
+    }
+    .editor-demo + p {
+      margin-bottom: 0;
     }
 
     .figure-image {
