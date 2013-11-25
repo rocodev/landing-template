@@ -36,3 +36,10 @@
   <%= render :partial => "landing/welcome/get_started" %>
 
 </div>
+
+<%= content_for :javascripts do %>
+<script>
+  $('.landing-menu').data('affix').options.offset.top = 520;
+  $('.landing-menu').data('affix').options.offsetTop = 520;
+</script>
+<% end %>

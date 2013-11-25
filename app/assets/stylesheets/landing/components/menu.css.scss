@@ -30,6 +30,8 @@
   z-index: 100;
   -webkit-font-smoothing: subpixel-antialiased;
   @include box-sizing(border-box);
+  @include transition-property(height line-height);
+  @include transition-duration(150ms);
 
   .brand {
     @extend %menu-item;
@@ -63,5 +65,15 @@
       margin: 0 0 0 ($menu-padding * -0.5);
       @include border-radius(0);
     }
+  }
+}
+
+.landing-menu.affix {
+  height: $menu-height-small;
+  line-height: $menu-height-small;
+
+  .brand,
+  .nav-pills > li > a {
+    line-height: $menu-height-small;
   }
 }
