@@ -45,4 +45,12 @@
       @include border-radius(3px);
     }
   }
+
+  .landing-get-started {
+    p {
+      font-size: 22px;
+      line-height: 50px;
+      margin-bottom: 0;
+    }
+  }
 }
