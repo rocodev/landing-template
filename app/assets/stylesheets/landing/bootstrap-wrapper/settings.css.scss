@@ -13,11 +13,18 @@ $headingsColor:      $base-strong-color;
 
 // Component sizing
 // ----------------
+$fontSizeLarge: 18px;
+$fontSizeSmall: 13px;
+$fontSizeMini:  11px;
+
 $paddingLarge: 14px 19px; // 50px
 $paddingSmall: 4px 10px;  // 30px
 $paddingMini:  0 6px;   // 22px
 
 // Buttons
 // ----------------
+$btnPrimaryBackground:          hsl(200,100%,32.5%);
+$btnPrimaryBackgroundHighlight: hsl(205,66.67%,24%);
+
 $btnSuccessBackground:          #6BBD3F;
 $btnSuccessBackgroundHighlight: #058A2C;
