@@ -25,18 +25,24 @@
       margin: 0 auto;
     }
   }
-}
 
-.landing-editor {
-  .figure-image {
-    margin: 0;
-  }
-  .demo-video {
-    // background image size: 1140x53
-    background: image-url('img_logdown_editor_chrome.png') no-repeat top center;
-    background-size: contain;
-    line-height: 0;
-    padding-top: relative-size(53px, 1140px, 100%);
-    @include border-radius(3px);
+  .landing-editor {
+    .theater-content,
+    .editor-demo + p {
+      width: 720px;
+      margin: 40px auto;
+    }
+
+    .figure-image {
+      margin: 0;
+    }
+    .demo-video {
+      // background image size: 1140x53
+      background: image-url('img_logdown_editor_chrome.png') no-repeat top center;
+      background-size: contain;
+      line-height: 0;
+      padding-top: relative-size(53px, 1140px, 100%);
+      @include border-radius(3px);
+    }
   }
 }
