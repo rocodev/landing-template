@@ -1,14 +1,20 @@
+Logdown Landing Template
+========================
 
-### Style Guides
+This is an empty Rails app generated with `bootstrappers`, and offer an seperated landing layout as an template.
 
-* [Ruby Style Guide](https://github.com/bbatsov/ruby-style-guide)
-* [Rails Style Guide](https://github.com/bbatsov/rails-style-guide)
-* [Better Specs](http://betterspecs.org/)
-* [Rails Best Practices](http://rails-bestpractices.com/)
+This Rails app features a entirely independent set of landing stylesheets, with its own build of Bootstrap 2.3.2, so it don't need to share settings with the `application.css`.
 
-### Speedup Tips
+The template also tries to split styles into components and pages, making it easier for future maintenance.
 
-* [Speed up the Rails Asset Pipeline precompile process](http://stackoverflow.com/questions/11390447/how-can-you-speed-up-the-rails-asset-pipeline-precompile-process/11390454#11390454)
+### Structures
 
-
-
+* views/layouts/landing.html.erb
+* views/landing/
+* views/pages/welcome.html.erb
+* views/pages/pricing.html.erb
+* views/pages/tours.html.erb
+* views/pages/explore.html.erb
+* assets/stylesheets/landing/index.css.scss
+* assets/javascripts/landing.js.coffee
+* vendor/assets/javascripts/jquery.inview.js
