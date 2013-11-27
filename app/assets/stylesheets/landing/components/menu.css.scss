@@ -39,6 +39,34 @@
     margin-left: -$menu-padding;
   }
 
+  .menu-toggle {
+    @extend %menu-item;
+
+    width: ($menu-padding * 3.2);
+    height: 70px;
+    background: none;
+    color: $menu-fg-color;
+    border: none;
+    margin-right: -$menu-padding;
+    position: relative;
+    display: none;
+
+    &:before {
+      width: $menu-padding * 1.2;
+      height: 3px;
+      background-color: $menu-fg-color;
+      content: '';
+      display: block;
+      position: absolute;
+      top: percentage(24px / 70px);
+      left: $menu-padding;
+
+      box-shadow:
+        0 8px 0 $menu-fg-color,
+        0 16px 0 $menu-fg-color;
+    }
+  }
+
   .nav-pills {
     &:last-child {
       margin-right: -$menu-padding;
@@ -75,5 +103,15 @@
   .brand,
   .nav-pills > li > a {
     line-height: $menu-height-small;
+  }
+}
+
+// Responsive Menu
+@media (max-width: 600px) {
+  .landing-menu {
+    .menu-toggle {
+      display: block;
+      float: right;
+    }
   }
 }

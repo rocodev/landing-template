@@ -6,6 +6,10 @@
       <%= Setting.app_name %></span>
     <% end %>
 
+    <button type="button" class="menu-toggle">
+      <span class="hide">Toggle Navigation</span>
+    </button>
+
     <%= render_list :class => "nav nav-pills landing-nav pull-right" do |li|
       li << link_to("Tours", "/tours")
       li << link_to("Pricing", "/pricing")
