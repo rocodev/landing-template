@@ -28,6 +28,13 @@
       display: block;
       margin: 0 auto;
     }
+
+    @media (max-width: 767px) {
+      margin-bottom: 20px;
+      img {
+        max-width: 100%;
+      }
+    }
   }
 
   .landing-editor {
