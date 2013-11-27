@@ -133,6 +133,8 @@
       overflow: hidden;
       clear: both;
       margin-left: ($menu-padding * -0.5);
+      margin-right: ($menu-padding * -0.5) !important;
+
       @include transition(height 350ms $timing-bounce-in-out);
 
       &, & > li { float: none; }
@@ -143,6 +145,19 @@
 
       li.last {
         padding-bottom: ($menu-padding * 0.5);
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .landing-menu {
+    .nav-pills {
+      margin-left: -$menu-padding;
+      margin-right: -$menu-padding !important;
+
+      a {
+        margin: 0;
       }
     }
   }
