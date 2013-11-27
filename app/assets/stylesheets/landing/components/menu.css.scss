@@ -124,12 +124,12 @@
       overflow: hidden;
       clear: both;
       margin-left: ($menu-padding * -0.5);
+      @include transition(height 350ms $timing-bounce-in-out);
 
       &, & > li { float: none; }
 
       &.open {
         height: auto;
-        overflow: visible;
       }
 
       li.last {
