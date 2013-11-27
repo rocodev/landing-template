@@ -105,6 +105,15 @@
   }
 }
 
+.landing-menu.touch {
+  .menu-toggle {
+    &:hover, &:focus {
+      background-color: inherit;
+      color: inherit;
+    }
+  }
+}
+
 // Responsive Menu
 @media (max-width: 600px) {
   .landing-menu {

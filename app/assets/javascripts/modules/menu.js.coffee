@@ -14,6 +14,9 @@ class LandingMenu
   init: ->
     @menuHeight = @elements.$menu[0].scrollHeight;
 
+    if (typeof document.body.ontouchstart isnt "undefined")
+      @container.addClass('touch') # To prevent hover style
+
   bindEvents: ->
     $menu = @elements.$menu
 
