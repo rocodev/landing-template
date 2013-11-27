@@ -1,7 +1,7 @@
 @import "../mixins";
 
 .poly-theater {
-  width: relative-size(700px, 940px, 100%);
+  @extend %section-narrow-inner;
 
   &, .theater-content {
     margin: 40px auto;
@@ -9,8 +9,5 @@
 
   @media (max-width: 979px) {
     width: relative-size(640px, 724px, 100%);
-  }
-  @media (max-width: 640px) {
-    width: 100%;
   }
 }

@@ -92,3 +92,17 @@
     bottom: -1px;
   }
 }
+
+%section-narrow-inner {
+  width: relative-size($section-narrow-width, 940px, 100%);
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (max-width: 767px) {
+    width: 520px;
+  }
+  @media (max-width: 600px) {
+    width: 100%;
+  }
+}
+

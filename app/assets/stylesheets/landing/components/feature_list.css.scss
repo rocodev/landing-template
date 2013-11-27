@@ -62,7 +62,6 @@
 // Feature list with 2 columns
 .feature-list.duo-columns {
   @extend %self-clear;
-  width: relative-size($section-narrow-width, 940px, 100%);
   margin: 40px auto 10px;
 
   .feature {
@@ -93,18 +92,11 @@
 // Responsive
 @media (max-width: 767px) {
   .feature-list.duo-columns {
-    width: 520px;
-
     .feature {
       width: 100%;
       float: none;
       margin-bottom: 40px !important;
     }
-  }
-}
-@media (max-width: 600px) {
-  .feature-list.duo-columns {
-    width: 100%;
   }
 }
 

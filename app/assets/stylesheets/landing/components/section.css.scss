@@ -35,5 +35,5 @@
 }
 
 .section-narrow-inner {
-  width: $section-narrow-width;
+  @extend %section-narrow-inner;
 }
