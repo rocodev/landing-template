@@ -60,5 +60,17 @@
       line-height: 50px;
       margin-bottom: 0;
     }
+
+    @media (max-width: 560px) {
+      text-align: center;
+
+      p {
+        margin-bottom: 20px;
+      }
+
+      .pull-left, .pull-right {
+        float: none;
+      }
+    }
   }
 }
