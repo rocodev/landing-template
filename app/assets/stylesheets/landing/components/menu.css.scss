@@ -41,7 +41,7 @@
     @extend %menu-item;
 
     width: ($menu-padding * 3.2);
-    height: 70px;
+    height: $menu-height-small;
     background: none;
     color: $menu-fg-color;
     border: none;
@@ -108,9 +108,33 @@
 // Responsive Menu
 @media (max-width: 600px) {
   .landing-menu {
+    line-height: $menu-height-small;
+
     .menu-toggle {
       display: block;
       float: right;
+    }
+
+    .brand,
+    .nav-pills > li > a {
+      line-height: $menu-height-small;
+    }
+    .nav-pills {
+      height: 0;
+      overflow: hidden;
+      clear: both;
+      margin-left: ($menu-padding * -0.5);
+
+      &, & > li { float: none; }
+
+      &.open {
+        height: auto;
+        overflow: visible;
+      }
+
+      li.last {
+        padding-bottom: ($menu-padding * 0.5);
+      }
     }
   }
 }
