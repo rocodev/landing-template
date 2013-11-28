@@ -1,0 +1,40 @@
+@mixin media-bt-wide {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+@mixin media-bt-middle {
+  @media (max-width: 979px) {
+    @content;
+  }
+}
+@mixin media-bt-middle-only {
+  @media (min-width: 768px) and (max-width: 979px) {
+    @content;
+  }
+}
+@mixin media-bt-small {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+@mixin media-small-tablet {
+  @media (max-width: 600px) {
+    @content;
+  }
+}
+@mixin media-iphone5-landscape {
+  @media (max-width: 568px) {
+    @content;
+  }
+}
+@mixin media-iphone4-landscape {
+  @media (max-width: 480px) {
+    @content;
+  }
+}
+@mixin media-smartphone {
+  @media (max-width: 400px) {
+    @content;
+  }
+}
