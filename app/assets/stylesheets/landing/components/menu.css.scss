@@ -1,4 +1,4 @@
-@import "../variables";
+@import "../mixins";
 @import "compass/css3/border-radius";
 @import "compass/css3/transition";
 @import "compass/css3/box-sizing";
@@ -115,7 +115,7 @@
 }
 
 // Responsive Menu
-@media (max-width: 600px) {
+@include media-small-tablet {
   .landing-menu {
     line-height: $menu-height-small;
 
@@ -150,7 +150,7 @@
   }
 }
 
-@media (max-width: 480px) {
+@include media-iphone4-landscape {
   .landing-menu {
     .nav-pills {
       margin-left: -$menu-padding;

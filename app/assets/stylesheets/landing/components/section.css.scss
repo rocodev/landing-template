@@ -38,7 +38,7 @@
   @extend %section-narrow-inner;
 }
 
-@media (max-width: 640px) {
+@include media-small-tablet {
   .landing-section {
     padding: ($section-padding/2) 0;
 
@@ -53,7 +53,7 @@
   }
 }
 
-@media (max-width: 400px) {
+@include media-smartphone {
   .landing-section {
     .section-title {
       font-size: 28px;

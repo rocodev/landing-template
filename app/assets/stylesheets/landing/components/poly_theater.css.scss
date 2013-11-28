@@ -7,7 +7,7 @@
     margin: 40px auto;
   }
 
-  @media (max-width: 979px) {
+  @include media-bt-middle {
     width: relative-size(640px, 724px, 100%);
   }
 }

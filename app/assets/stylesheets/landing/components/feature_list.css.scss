@@ -90,7 +90,7 @@
 }
 
 // Responsive
-@media (max-width: 767px) {
+@include media-bt-small {
   .feature-list.duo-columns {
     .feature {
       width: 100%;
@@ -100,7 +100,7 @@
   }
 }
 
-@media (max-width: 400px) {
+@include media-smartphone {
   .feature-list.with-icon,
   .feature-list.large-type.with-icon {
     .feature-icon {

@@ -32,7 +32,7 @@
 
 // Resonsive fixes
 // ---------------
-@media (max-width: 767px) {
+@include media-bt-small {
   body {
     padding-left: 0;
     padding-right: 0;
@@ -43,7 +43,7 @@
   }
 }
 
-@media (max-width: 480px) {
+@include media-iphone4-landscape {
   .container {
     margin-left: 20px;
     margin-right: 20px;
