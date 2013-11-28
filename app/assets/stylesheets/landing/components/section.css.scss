@@ -37,3 +37,26 @@
 .section-narrow-inner {
   @extend %section-narrow-inner;
 }
+
+@media (max-width: 640px) {
+  .landing-section {
+    padding: ($section-padding/2) 0;
+
+    &.mid-padding, &.slim-body {
+      padding-top: ($section-padding/4);
+      padding-bottom: ($section-padding/4);
+    }
+
+    .section-title {
+      font-size: 32px;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .landing-section {
+    .section-title {
+      font-size: 28px;
+    }
+  }
+}
