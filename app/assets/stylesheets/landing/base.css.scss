@@ -5,7 +5,7 @@
 
 .layout-landing {
   background-image: image-url("images/white_wall_hash.png");
-  padding-top: 90px;
+  padding-top: $menu-height + 20px;
 
   .footer {
     margin-top: 40px;
@@ -40,6 +40,12 @@
   .container {
     margin-left: 40px;
     margin-right: 40px;
+  }
+}
+
+@include media-small-tablet {
+  .layout-landing {
+    padding-top: $menu-height-small + 20px;
   }
 }
 
