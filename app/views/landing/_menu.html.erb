@@ -3,6 +3,7 @@
     <h1 class="hide"><%= Setting.app_name %></h1>
 
     <%= render_list :class => "nav nav-pills landing-nav pull-right" do |li|
+      li << [link_to("Home", root_path), :class => "off-canvas-only"]
       li << link_to("Tours", "/tours")
       li << link_to("Pricing", "/pricing")
       li << link_to("Explore", "/explore")

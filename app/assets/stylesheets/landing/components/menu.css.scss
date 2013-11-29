@@ -35,6 +35,10 @@
   @include box-sizing(border-box);
   @include transition(line-height 150ms);
 
+  .off-canvas-only {
+    display: none;
+  }
+
   .brand {
     @extend %menu-item;
     font-size: 28px;
@@ -148,6 +152,10 @@
       padding: ($menu-padding * 0.5) 0;
 
       &, & > li { float: none; }
+
+      li.off-canvas-only {
+        display: list-item;
+      }
     }
   }
 }
