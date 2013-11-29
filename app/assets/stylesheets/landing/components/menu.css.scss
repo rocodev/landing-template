@@ -17,6 +17,10 @@
   &:hover, &:focus {
     @extend %menu-item-hover;
   }
+
+  @include media-small-tablet {
+    @include transition(none);
+  }
 }
 
 .landing-menu {
@@ -121,8 +125,9 @@
 @include media-small-tablet {
   .landing-menu {
     line-height: $menu-height-small;
+    @include transition(none);
 
-    &.transition {
+    &.off-canvas-transition {
       @include transition(350ms $timing-ease-out-duo);
     }
 
