@@ -26,28 +26,41 @@
     }
   }
 
-  .landing-editor {
-    .poly-theater {
-      margin-bottom: 0;
-    }
-    .figure-image {
-      margin: 0;
-    }
-    .demo-video {
-      // background image size: 1140x53
-      background: image-url('img_logdown_editor_chrome.png') no-repeat top center;
-      background-size: contain;
-      line-height: 0;
-      padding-top: relative-size(53px, 1140px, 100%);
-      @include border-radius(3px);
-    }
-  }
-
   .landing-get-started {
     p {
       font-size: 22px;
       line-height: 50px;
       margin-bottom: 0;
+    }
+  }
+}
+
+.landing-editor {
+  .poly-theater {
+    margin-bottom: 0;
+  }
+  .figure-image {
+    margin: 0;
+  }
+  .demo-video {
+    // background image size: 1140x53
+    // video size: 1134x692
+    background: image-url('img_logdown_editor_chrome.png') no-repeat top center;
+    background-size: contain;
+    line-height: 0;
+    padding-top: relative-size(53px, 1140px, 100%);
+    @include border-radius(3px);
+
+    video {
+      width: 100%;
+      height: ($section-narrow-width * 692 / 1134);
+
+      @include media-bt-small {
+        height: (520px * 692 / 1134);
+      }
+      @include media-small-tablet {
+        height: auto;
+      }
     }
   }
 }
