@@ -118,7 +118,7 @@
 @include media-small-tablet {
   .landing-menu {
     line-height: $menu-height-small;
-    @include transition(350ms ease-in-out);
+    @include transition(350ms $timing-ease-out-duo);
 
     .menu-toggle {
       display: block;
