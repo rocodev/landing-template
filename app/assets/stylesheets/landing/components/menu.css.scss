@@ -118,6 +118,7 @@
 @include media-small-tablet {
   .landing-menu {
     line-height: $menu-height-small;
+    @include transition(350ms ease-in-out);
 
     .menu-toggle {
       display: block;
@@ -129,23 +130,13 @@
       line-height: $menu-height-small;
     }
     .nav-pills {
-      height: 0;
       overflow: hidden;
       clear: both;
       margin-left: ($menu-padding * -0.5);
       margin-right: ($menu-padding * -0.5) !important;
-
-      @include transition(height 350ms $timing-bounce-in-out);
+      padding: ($menu-padding * 0.5) 0;
 
       &, & > li { float: none; }
-
-      &.open {
-        height: auto;
-      }
-
-      li.last {
-        padding-bottom: ($menu-padding * 0.5);
-      }
     }
   }
 }

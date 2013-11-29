@@ -13,6 +13,8 @@ class LandingMenu
 
   init: ->
     @menuHeight = @elements.$menu[0].scrollHeight;
+    @transformStyle = "translateY(-#{@menuHeight}px)"
+    @container.css('transform', @transformStyle)
 
     if (typeof document.body.ontouchstart isnt "undefined")
       @container.addClass('touch') # To prevent hover style
@@ -21,10 +23,10 @@ class LandingMenu
     $menu = @elements.$menu
 
     @container.on 'click', '.menu-toggle', (event) =>
-      if $menu.hasClass('open')
-        $menu.removeClass('open').height(0)
+      if @container.hasClass('open')
+        @container.removeClass('open').css('transform', @transformStyle)
       else
-        $menu.addClass('open').height(@menuHeight)
+        @container.addClass('open').css('transform', "translateY(0)")
 
-$ ->
-  menu = new LandingMenu('.landing-menu')
+# Fire init scripts ASAP
+menu = new LandingMenu('.landing-menu')

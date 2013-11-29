@@ -2,6 +2,13 @@
   <div class="container">
     <h1 class="hide"><%= Setting.app_name %></h1>
 
+    <%= render_list :class => "nav nav-pills landing-nav pull-right" do |li|
+      li << link_to("Tours", "/tours")
+      li << link_to("Pricing", "/pricing")
+      li << link_to("Explore", "/explore")
+      li << link_to("Sign in", new_user_session_path)
+    end %>
+
     <%= link_to "/", :class => "brand pull-left" do %>
       <%= Setting.app_name %></span>
     <% end %>
@@ -10,11 +17,6 @@
       <span class="hide">Toggle Navigation</span>
     </button>
 
-    <%= render_list :class => "nav nav-pills landing-nav pull-right" do |li|
-      li << link_to("Tours", "/tours")
-      li << link_to("Pricing", "/pricing")
-      li << link_to("Explore", "/explore")
-      li << link_to("Sign in", new_user_session_path)
-    end %>
+
   </div>
 </div>
