@@ -16,6 +16,10 @@ class LandingMenu
     @transformStyle = "translateY(-#{@menuHeight}px)"
     @container.css('transform', @transformStyle)
 
+    setTimeout =>
+      @container.addClass('transition')
+    ,50
+
     if (typeof document.body.ontouchstart isnt "undefined")
       @container.addClass('touch') # To prevent hover style
 
