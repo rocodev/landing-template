@@ -35,67 +35,67 @@
       border-width: 0 1px;
       margin: 0 -1px;
     }
+  }
 
-    .plan-header {
-      @extend %heading-font;
-      color: lighten(black, 30%);
-      text-align: center;
-      border-bottom: 2px dashed lighten(black, 50%);
-      margin-top: -5px;
-      padding-bottom: 15px;
-    }
-    .plan-title, .plan-price, .plan-desc {
-      font-weight: normal;
-      line-height: 35px;
-      margin: 0;
-    }
-    .plan-title {
-      font-size: 26px;
-    }
-    .plan-price {
-      font-size: 32px;
-    }
-    .plan-desc {
-      color: lighten(black, 35%);
-      font-size: 18px;
-    }
+  .plan-header {
+    @extend %heading-font;
+    color: lighten(black, 30%);
+    text-align: center;
+    border-bottom: 2px dashed lighten(black, 50%);
+    margin-top: -5px;
+    padding-bottom: 15px;
+  }
+  .plan-title, .plan-price, .plan-desc {
+    font-weight: normal;
+    line-height: 35px;
+    margin: 0;
+  }
+  .plan-title {
+    font-size: 26px;
+  }
+  .plan-price {
+    font-size: 32px;
+  }
+  .plan-desc {
+    color: lighten(black, 35%);
+    font-size: 18px;
+  }
 
-    .plan-body {
-      margin: (20px - 8px) 0;
-    }
+  .plan-body {
+    margin: (20px - 8px) 0;
+  }
 
-    .plan-actions {
-      margin-top: 40px;
-    }
+  .plan-actions {
+    margin-top: 40px;
+  }
 
-    .list-features {
-      margin: 0;
-      list-style: none;
+  .list-features {
+    margin: 0;
+    list-style: none;
 
-      li {
-        //height: 32px;
-        font-size: 16px;
-        line-height: 32px;
-        overflow: auto;
+    li {
+      //height: 32px;
+      font-size: 16px;
+      line-height: 32px;
+      overflow: auto;
 
-        &:before {
-          content: "\f00c";
-          font-family: FontAwesome;
-          margin-right: 0.5em;
-        }
+      &:before {
+        content: "\f00c";
+        font-family: FontAwesome;
+        margin-right: 0.5em;
       }
     }
-    .list-fetures-basic li:before {
-      width: 15px;
-      content: '•';
-      text-align: center;
-      display: inline-block;
-    }
-    .list-fetures-premium li,
-    .list-features .premium {
-      color: rgb(25,100,25);
-      font-weight: 600;
-    }
+  }
+  .list-fetures-basic li:before {
+    width: 15px;
+    content: '•';
+    text-align: center;
+    display: inline-block;
+  }
+  .list-fetures-premium li,
+  .list-features .premium {
+    color: rgb(25,100,25);
+    font-weight: 600;
   }
 }
 
@@ -112,5 +112,26 @@
       padding: 20px percentage(15px / 960px);
     }
   }
+}
+@media (max-width: 900px) {
+  .pricing-table.type-a {
+    max-width: 100%;
+
+    .pricing-plan {
+      padding: 15px percentage(10px / 960px);
+    }
+
+    .list-features {
+      li {
+        font-size: 14px;
+      }
+      li:before {
+        margin-right: 0.2em;
+      }
+    }
+  }
+}
+@include media-bt-small {
+
 }
 
