@@ -18,8 +18,8 @@
 
   .pricing-plan {
     width: (100% / 3); // 320px at normal
-    min-height: 540px;
-    padding: 20px percentage(25px / 960px);
+    min-height: relative-size(540px);
+    padding: relative-size(20px) percentage(25px / 960px);
     //margin-left: (270px/3); //For 2 plans
     float: left;
     box-sizing: border-box;
@@ -42,8 +42,8 @@
     color: lighten(black, 30%);
     text-align: center;
     border-bottom: 2px dashed lighten(black, 50%);
-    margin-top: -5px;
-    padding-bottom: 15px;
+    margin-top: relative-size(-5px);
+    padding-bottom: relative-size(15px);
   }
   .plan-title, .plan-price, .plan-desc {
     font-weight: normal;
@@ -51,22 +51,25 @@
     margin: 0;
   }
   .plan-title {
-    font-size: 26px;
+    font-size: relative-size(26px);
+    line-height: relative-size(35px,26px);
   }
   .plan-price {
-    font-size: 32px;
+    font-size: relative-size(32px);
+    line-height: relative-size(35px,32px);
   }
   .plan-desc {
     color: lighten(black, 35%);
-    font-size: 18px;
+    font-size: relative-size(18px);
+    line-height: relative-size(35px,18px);
   }
 
   .plan-body {
-    margin: (20px - 8px) 0;
+    margin: relative-size(20px - 8px) 0;
   }
 
   .plan-actions {
-    margin-top: 40px;
+    margin-top: relative-size(40px);
   }
 
   .list-features {
@@ -74,12 +77,11 @@
     list-style: none;
 
     li {
-      //height: 32px;
-      font-size: 16px;
-      line-height: 32px;
+      line-height: 2em;
       overflow: auto;
 
       &:before {
+        width: 1em;
         content: "\f00c";
         font-family: FontAwesome;
         margin-right: 0.5em;
@@ -87,7 +89,6 @@
     }
   }
   .list-fetures-basic li:before {
-    width: 15px;
     content: '•';
     text-align: center;
     display: inline-block;
@@ -109,22 +110,22 @@
     max-width: 100%;
 
     .pricing-plan {
-      padding: 20px percentage(15px / 960px);
+      padding-left: percentage(15px / 960px);
+      padding-right: percentage(15px / 960px);
     }
   }
 }
 @media (max-width: 900px) {
   .pricing-table.type-a {
     max-width: 100%;
+    font-size: 14px;
 
     .pricing-plan {
-      padding: 15px percentage(10px / 960px);
+      padding-left: percentage(10px / 960px);
+      padding-right: percentage(10px / 960px);
     }
 
     .list-features {
-      li {
-        font-size: 14px;
-      }
       li:before {
         margin-right: 0.2em;
       }
