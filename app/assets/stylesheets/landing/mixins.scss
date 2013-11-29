@@ -99,10 +99,10 @@
   margin-left: auto;
   margin-right: auto;
 
-  @media (max-width: 767px) {
+  @include media-bt-small {
     width: 520px;
   }
-  @media (max-width: 600px) {
+  @include media-small-tablet {
     width: 100%;
   }
 }
