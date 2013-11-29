@@ -175,3 +175,9 @@
   }
 }
 
+@include media-smartphone {
+  .pricing-table.type-a {
+    width: percentage(300px/320px);
+  }
+}
+
