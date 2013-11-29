@@ -118,7 +118,7 @@
 @media (max-width: 900px) {
   .pricing-table.type-a {
     max-width: 100%;
-    font-size: 14px;
+    font-size: percentage(14px/16px);
 
     .pricing-plan {
       padding-left: percentage(10px / 960px);
@@ -132,7 +132,46 @@
     }
   }
 }
-@include media-bt-small {
 
+@include media-bt-small {
+  .pricing-table.type-a {
+    width: 80%;
+    background-image: none;
+    font-size: $base-font-size;
+    border: none;
+
+    &:before, &:after {
+      display: none;
+    }
+
+    .pricing-plan {
+      background-color: white;
+      width: 100%;
+      margin-bottom: 30px;
+      padding-left: percentage(25px / 960px);
+      padding-right: percentage(25px / 960px);
+      border: 1px solid darken(white, 20%);
+      border-radius: 6px;
+      float: none;
+      position: relative;
+
+      &.odd {
+        background-color: white;
+        border-width: 1px;
+        margin: 0 0 30px;
+      }
+
+      &:after {
+        content: '';
+        width: 100%;
+        height: 5px;
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+        @include curved-shadow-background(bottom, rgba(0,0,0,.4), transparent);
+      }
+    }
+  }
 }
 
