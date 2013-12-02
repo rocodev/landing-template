@@ -10,6 +10,7 @@
   <%= stylesheet_link_tag "landing" %>
 
   <%= yield :stylesheets %>
+  <%= yield :header_meta %>
 
   <meta property="og:title"       content="<%= page_title ||  SeoHelper.configuration.site_name %>"/>
   <meta property="og:description" content="<%= page_description || SeoHelper.configuration.default_page_description %>"/>
