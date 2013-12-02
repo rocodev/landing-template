@@ -51,6 +51,63 @@
       right: 0;
       &:before { right: 100%; }
     }
+  }
 
+  @include media-bt-small {
+    & ~ p, .main-image, .figure-notes {
+      width: 90%;
+    }
+
+    .figure-notes {
+      font-size: 0;
+      margin: 20px auto 0;
+    }
+    .note {
+      width: (100% - 5%*3)/2;
+      font-size: $base-font-size * 0.9;
+      position: static;
+      display: inline-block;
+      vertical-align: top;
+      margin: 15px 5%;
+      padding: 0;
+      float: none !important;
+
+      &:nth-child(even) {
+        margin-left: 0;
+      }
+      &:before, &:after {
+        display: none;
+      }
+      &.left, &.right, .note-title {
+        text-align: center;
+      }
+
+      .note-title {
+        color: $base-strong-color;
+        display: block;
+      }
+    }
+  }
+
+  @include media-smartphone {
+    & ~ p, .main-image, .figure-notes {
+      width: 100%;
+    }
+    .note {
+      width: 100%;
+      font-size: $base-font-size;
+      display: block;
+      margin: 15px 0;
+
+      &:first-child {
+        margin-top: 0;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+      &.left, &.right, .note-title {
+        text-align: left;
+      }
+    }
   }
 }
