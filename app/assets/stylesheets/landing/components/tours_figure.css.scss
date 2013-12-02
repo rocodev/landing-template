@@ -6,18 +6,18 @@
   position: relative;
 
   & ~ p {
-    width: $tours-content-width;
+    width: percentage($tours-content-width / 940px);
     margin: 10px auto;
   }
 
   .main-image {
-    width: $tours-content-width;
+    width: percentage($tours-content-width / 940px);
     display: block;
     margin: 0 auto;
   }
 
   .note {
-    width: $tours-note-width;
+    width: percentage($tours-note-width / 940px);
     font-size: 90%;
     line-height: 18px;
     display: block;
