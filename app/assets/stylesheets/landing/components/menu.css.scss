@@ -1,4 +1,4 @@
-@import "../variables";
+@import "../mixins";
 @import "compass/css3/border-radius";
 @import "compass/css3/transition";
 @import "compass/css3/box-sizing";
@@ -17,11 +17,14 @@
   &:hover, &:focus {
     @extend %menu-item-hover;
   }
+
+  @include media-small-tablet {
+    @include transition(none);
+  }
 }
 
 .landing-menu {
   width: 100%;
-  height: $menu-height;
   background-color: $menu-bg-color;
   line-height: $menu-height;
   position: fixed;
@@ -30,8 +33,11 @@
   z-index: 100;
   -webkit-font-smoothing: subpixel-antialiased;
   @include box-sizing(border-box);
-  @include transition-property(height line-height);
-  @include transition-duration(150ms);
+  @include transition(line-height 150ms);
+
+  .off-canvas-only {
+    display: none;
+  }
 
   .brand {
     @extend %menu-item;
@@ -39,7 +45,37 @@
     margin-left: -$menu-padding;
   }
 
+  .menu-toggle {
+    @extend %menu-item;
+
+    width: ($menu-padding * 3.2);
+    height: $menu-height-small;
+    background: none;
+    color: $menu-fg-color;
+    border: none;
+    margin-right: -$menu-padding;
+    position: relative;
+    display: none;
+
+    &:before {
+      width: $menu-padding * 1.2;
+      height: 3px;
+      background-color: $menu-fg-color;
+      content: '';
+      display: block;
+      position: absolute;
+      top: percentage(24px / 70px);
+      left: $menu-padding;
+
+      box-shadow:
+        0 8px 0 $menu-fg-color,
+        0 16px 0 $menu-fg-color;
+    }
+  }
+
   .nav-pills {
+    margin-bottom: 0;
+
     &:last-child {
       margin-right: -$menu-padding;
     }
@@ -69,11 +105,70 @@
 }
 
 .landing-menu.affix {
-  height: $menu-height-small;
   line-height: $menu-height-small;
 
   .brand,
   .nav-pills > li > a {
     line-height: $menu-height-small;
+  }
+}
+
+.landing-menu.touch {
+  .menu-toggle {
+    &:hover, &:focus {
+      background-color: inherit;
+      color: inherit;
+    }
+  }
+  .nav-pills a {
+    font-weight: 400;
+  }
+}
+
+// Responsive Menu
+@include media-small-tablet {
+  .landing-menu {
+    line-height: $menu-height-small;
+    @include transition(none);
+
+    &.off-canvas-transition {
+      @include transition(350ms $timing-ease-out-duo);
+    }
+
+    .menu-toggle {
+      display: block;
+      float: right;
+    }
+
+    .brand,
+    .nav-pills > li > a {
+      line-height: $menu-height-small;
+    }
+    .nav-pills {
+      overflow: hidden;
+      clear: both;
+      margin-left: ($menu-padding * -0.5);
+      margin-right: ($menu-padding * -0.5) !important;
+      padding: ($menu-padding * 0.5) 0;
+
+      &, & > li { float: none; }
+
+      li.off-canvas-only {
+        display: list-item;
+      }
+    }
+  }
+}
+
+@include media-iphone4-landscape {
+  .landing-menu {
+    .nav-pills {
+      margin-left: -$menu-padding;
+      margin-right: -$menu-padding !important;
+
+      a {
+        margin: 0;
+      }
+    }
   }
 }

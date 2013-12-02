@@ -5,16 +5,15 @@
 
 .layout-landing {
   background-image: image-url("images/white_wall_hash.png");
-  padding-top: 90px;
+  padding-top: $menu-height + 20px;
 
   .footer {
     margin-top: 40px;
+    .copyright {
+      padding-top: 7px;
+    }
   }
 }
-.poly-theater {
-  margin: 20px auto;
-}
-
 
 // Shares Styles
 // -------------
@@ -32,3 +31,53 @@
     margin-bottom: 10px;
   }
 }
+
+// Resonsive fixes
+// ---------------
+@include media-bt-small {
+  body {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .container {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+}
+
+@include media-small-tablet {
+  .layout-landing {
+    padding-top: $menu-height-small + 20px;
+  }
+}
+
+@include media-iphone5-landscape {
+  .layout-landing .footer {
+
+    .pull-right {
+      float: none;
+    }
+    .nav-pills {
+      text-align: center;
+      margin-bottom: 10px;
+
+      & > li {
+        display: inline-block;
+        float: none;
+      }
+    }
+    .copyright {
+      text-align: center;
+      padding-top: 0;
+      padding-bottom: 10px;
+    }
+  }
+}
+
+@include media-iphone4-landscape {
+  .container {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+

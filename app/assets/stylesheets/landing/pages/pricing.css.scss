@@ -1,5 +1,18 @@
+@import "../mixins";
+
 .page-pricing {
+  .section-title {
+    display: none;
+  }
+
   .pricing-table {
-    margin: 0 -10px 20px;
+    margin-bottom: 20px;
+  }
+
+  @include media-bt-small {
+    .section-title {
+      margin: 10px 0 30px;
+      display: block;
+    }
   }
 }

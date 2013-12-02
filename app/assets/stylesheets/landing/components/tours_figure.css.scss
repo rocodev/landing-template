@@ -1,27 +1,29 @@
 @import "../mixins";
+@import "compass/css3/box-sizing";
 
 .tours-figure {
   margin: 40px 0;
   position: relative;
 
   & ~ p {
-    width: $tours-content-width;
+    width: percentage($tours-content-width / 940px);
     margin: 10px auto;
   }
 
   .main-image {
-    width: $tours-content-width;
+    width: percentage($tours-content-width / 940px);
     display: block;
     margin: 0 auto;
   }
 
   .note {
-    width: 134px;
+    width: percentage($tours-note-width / 940px);
     font-size: 90%;
     line-height: 18px;
     display: block;
     padding: 0 6px;
     position: absolute;
+    @include box-sizing(border-box);
 
     &:before, &:after {
       content: '';
@@ -40,13 +42,72 @@
 
     &.left {
       text-align: right;
+      padding-left: 0;
       left: 0;
       &:before { left: 100%; }
     }
     &.right {
+      padding-right: 0;
       right: 0;
       &:before { right: 100%; }
     }
+  }
 
+  @include media-bt-small {
+    & ~ p, .main-image, .figure-notes {
+      width: 90%;
+    }
+
+    .figure-notes {
+      font-size: 0;
+      margin: 20px auto 0;
+    }
+    .note {
+      width: (100% - 5%*3)/2;
+      font-size: $base-font-size * 0.9;
+      position: static;
+      display: inline-block;
+      vertical-align: top;
+      margin: 15px 5%;
+      padding: 0;
+      float: none !important;
+
+      &:nth-child(even) {
+        margin-left: 0;
+      }
+      &:before, &:after {
+        display: none;
+      }
+      &.left, &.right, .note-title {
+        text-align: center;
+      }
+
+      .note-title {
+        color: $base-strong-color;
+        display: block;
+      }
+    }
+  }
+
+  @include media-smartphone {
+    & ~ p, .main-image, .figure-notes {
+      width: 100%;
+    }
+    .note {
+      width: 100%;
+      font-size: $base-font-size;
+      display: block;
+      margin: 15px 0;
+
+      &:first-child {
+        margin-top: 0;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+      &.left, &.right, .note-title {
+        text-align: left;
+      }
+    }
   }
 }

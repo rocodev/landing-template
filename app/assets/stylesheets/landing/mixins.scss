@@ -1,4 +1,5 @@
 @import "variables";
+@import "media_query_mixins";
 @import "compass/css3/images";
 
 // Functions
@@ -7,10 +8,13 @@
 }
 
 // Mixins
-@mixin tours-figure-note($top, $line-length: 0px) {
-  top: $top;
-  &:before {
-    width: $line-length;
+@mixin tours-figure-note($top, $line-length: 0px, $relative: false, $base-height: 400px) {
+  @if $relative {
+    top: percentage($top / $base-height);
+    &:before { width: percentage($line-length / $tours-note-width); }
+  } @else {
+    top: $top;
+    &:before { width: $line-length; }
   }
 }
 
@@ -92,3 +96,17 @@
     bottom: -1px;
   }
 }
+
+%section-narrow-inner {
+  width: relative-size($section-narrow-width, 940px, 100%);
+  margin-left: auto;
+  margin-right: auto;
+
+  @include media-bt-small {
+    width: 520px;
+  }
+  @include media-small-tablet {
+    width: 100%;
+  }
+}
+

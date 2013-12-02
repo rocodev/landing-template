@@ -33,3 +33,30 @@
     @include box-shadow(0 2px 6px rgba(0,0,0,.5));
   }
 }
+
+.section-narrow-inner {
+  @extend %section-narrow-inner;
+}
+
+@include media-small-tablet {
+  .landing-section {
+    padding: ($section-padding/2) 0;
+
+    &.mid-padding, &.slim-body {
+      padding-top: ($section-padding/4);
+      padding-bottom: ($section-padding/4);
+    }
+
+    .section-title {
+      font-size: 32px;
+    }
+  }
+}
+
+@include media-smartphone {
+  .landing-section {
+    .section-title {
+      font-size: 28px;
+    }
+  }
+}

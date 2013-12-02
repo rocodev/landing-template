@@ -1,10 +1,20 @@
 
     <div class="tours-header-nav tours-nav">
       <div class="btn btn-large btn-nav pull-left">
-        <%= fa_icon("angle-left") %> Previous
+        <span class="hidden-phone">
+          <%= fa_icon("angle-left") %> Previous
+        </span>
+        <div class="visible-phone">
+          <%= fa_icon("arrow-left") %>
+        </div>
       </div>
       <div class="btn btn-large btn-nav pull-right">
-        Next <%= fa_icon("angle-right") %>
+        <span class="hidden-phone">
+          Next <%= fa_icon("angle-right") %>
+        </span>
+        <div class="visible-phone">
+          <%= fa_icon("arrow-right") %>
+        </div>
       </div>
       <h2 class="header-nav-title tours-title">Tour</h2>
     </div>

@@ -1,0 +1,13 @@
+@import "../mixins";
+
+.poly-theater {
+  @extend %section-narrow-inner;
+
+  &, .theater-content {
+    margin: 40px auto;
+  }
+
+  @include media-bt-middle {
+    width: relative-size(640px, 724px, 100%);
+  }
+}

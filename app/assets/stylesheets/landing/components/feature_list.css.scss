@@ -62,7 +62,6 @@
 // Feature list with 2 columns
 .feature-list.duo-columns {
   @extend %self-clear;
-  width: relative-size($section-narrow-width, 940px, 100%);
   margin: 40px auto 10px;
 
   .feature {
@@ -87,5 +86,50 @@
   .feature-title {
     margin-top: 0;
     margin-bottom: 5px;
+  }
+}
+
+// Responsive
+@include media-bt-small {
+  .feature-list.duo-columns {
+    .feature {
+      width: 100%;
+      float: none;
+      margin-bottom: 40px !important;
+    }
+  }
+}
+
+@include media-smartphone {
+  .feature-list.with-icon,
+  .feature-list.large-type.with-icon {
+    .feature-icon {
+      float: none;
+      display: block;
+      margin: 0 auto;
+    }
+    .feature-title,
+    .feature-desc {
+      margin-left: 0;
+      margin-top: 10px;
+    }
+    .feature-title {
+      text-align: center;
+    }
+  }
+
+  .feature-list.small-icon.with-icon {
+    .feature-icon {
+      float: left;
+      margin: 0;
+    }
+    .feature-title,
+    .feature-desc {
+      margin-left: 35px;
+      margin-top: 0;
+    }
+    .feature-title {
+      text-align: left;
+    }
   }
 }

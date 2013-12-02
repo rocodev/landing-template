@@ -30,4 +30,10 @@ $menu-padding: 20px;
 $section-narrow-width: 720px;
 $section-padding: 80px; // Desired vertical padding.
 
-$tours-content-width: 640px;
+$tours-note-width: 140px;
+$tours-note-margin: 15px; // Figure note margin to the main image
+$tours-content-width: (940px - $tours-note-width*2 - $tours-note-margin*2);
+
+// Timing Functions
+$timing-bounce-in-out: cubic-bezier(.4,-0.2,.6,1.2);
+$timing-ease-out-duo: cubic-bezier(0,0,.3,1);

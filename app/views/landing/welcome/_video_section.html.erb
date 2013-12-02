@@ -1,48 +1,42 @@
 
   <div class="landing-section landing-editor">
     <div class="container">
-      <div class="row-fluid">
-        <div class="span10 offset1">
+      <h3 class="section-title">
+        Revolutionary Editor with Powerful features
+      </h3>
 
-          <h3 class="section-title">
-            Revolutionary Editor with Powerful features
-          </h3>
-
-          <div class="editor-demo">
-            <div class="poly-theater" data-fill="video">
-              <div class="theater-fallback" data-theater="fallback">
-                <div class="row-fluid">
-                  <div class="span6">
-                    <figure class="figure-image demo-editor">
-                      <%= image_tag('img_logdown_editor.png', :class => "with-shadow") %>
-                      <figcaption>Logodown Editor</figcaption>
-                    </figure>
-                  </div>
-                  <div class="span6">
-                    <figure class="figure-image demo-preview">
-                      <%= image_tag('img_logdown_preview.png', :class => "with-shadow") %>
-                      <figcaption>Logodown In-editor Preview</figcaption>
-                    </figure>
-                  </div>
-                </div>
+      <div class="editor-demo">
+        <div class="poly-theater" data-fill="video">
+          <div class="theater-fallback" data-theater="fallback">
+            <div class="row-fluid">
+              <div class="span6">
+                <figure class="figure-image demo-editor">
+                  <%= image_tag('img_logdown_editor.png', :class => "with-shadow") %>
+                  <figcaption>Logodown Editor</figcaption>
+                </figure>
               </div>
-
-              <div class="theater-content hide" data-theater="content">
-                <div class="demo-video with-shadow">
-                  <video poster="<%= image_path('img_logdown_editor_poster.png') %>"preload="auto">
-                    <source src="/videos/logdown_editor_demo_20130726.mp4" type="video/mp4">
-                    <source src="/videos/logdown_editor_demo_20130726.webm" type="video/webm">
-                  </video>
-                </div>
+              <div class="span6">
+                <figure class="figure-image demo-preview">
+                  <%= image_tag('img_logdown_preview.png', :class => "with-shadow") %>
+                  <figcaption>Logodown In-editor Preview</figcaption>
+                </figure>
               </div>
             </div>
           </div>
 
-          <p>
+          <div class="theater-content hide" data-theater="content">
+            <div class="demo-video with-shadow">
+              <video poster="<%= image_path('img_logdown_editor_poster.png') %>"preload="auto">
+                <source src="/videos/logdown_editor_demo_20130726.mp4" type="video/mp4">
+                <source src="/videos/logdown_editor_demo_20130726.webm" type="video/webm">
+              </video>
+            </div>
+          </div>
+
+          <p class="theater-desc">
             Supports GitHub Flavored Markdown, Latex in-editor preview, with the most handy image uploading interfaces. Never feel that easy blogging with code blocks, tables, and even math equations. Auto detect changes and enable prevent window closing to save your draft thoughts in last seconds.
             <%= link_to("Try the Demo now.", "/demo") %>
           </p>
-
         </div>
       </div>
     </div>

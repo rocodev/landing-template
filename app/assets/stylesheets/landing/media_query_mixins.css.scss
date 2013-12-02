@@ -1,0 +1,60 @@
+$enable-responsive: true;
+
+@mixin media-query($max-width: none, $min-width: none, $media: all) {
+  @if $enable-responsive {
+    @if ($max-width != none) and ($min-width != none) {
+      @media (min-width: $min-width) and (max-width: $max-width) {
+        @content;
+      }
+    } @else if ($max-width != none) {
+      @media (max-width: $max-width) {
+        @content;
+      }
+    } @else if ($min-width != none) {
+      @media (min-width: $min-width) {
+        @content;
+      }
+    }
+  }
+}
+
+@mixin media-bt-wide {
+  @include media-query($min-width: 1200px) {
+    @content;
+  }
+}
+@mixin media-bt-middle {
+  @include media-query($max-width: 979px) {
+    @content;
+  }
+}
+@mixin media-bt-middle-only {
+  @include media-query($min-width: 768px, $max-width: 979px) {
+    @content;
+  }
+}
+@mixin media-bt-small {
+  @include media-query($max-width: 767px) {
+    @content;
+  }
+}
+@mixin media-small-tablet {
+  @include media-query($max-width: 600px) {
+    @content;
+  }
+}
+@mixin media-iphone5-landscape {
+  @include media-query($max-width: 568px) {
+    @content;
+  }
+}
+@mixin media-iphone4-landscape {
+  @include media-query($max-width: 480px) {
+    @content;
+  }
+}
+@mixin media-smartphone {
+  @include media-query($max-width: 400px) {
+    @content;
+  }
+}

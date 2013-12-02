@@ -25,6 +25,13 @@ class PolyTheather
     false
 
 class VideoPolyTheater extends PolyTheather
+  init: ->
+    @isOniOS = /(iPad|iPhone|iPod)/g.test( navigator.userAgent );
+    #http://stackoverflow.com/questions/9038625/detect-if-device-is-ios
+
+    super
+
+
   checkReplaceCriteria: ->
     switch @theaterType
       when "video"
@@ -34,14 +41,20 @@ class VideoPolyTheater extends PolyTheather
         return false
 
   activate: ->
-    @container.on 'inview', (event, isInView, visiblePartX, visiblePartY) =>
-      if isInView and visiblePartY is ("both" or "bottom")
-        @container.off('inview')
-        @videoElements.each (index, video) ->
-          $(video).on 'ended', (event) ->
-            event.currentTarget.controls = true
-            $(event.currentTarget).off('ended')
-          video.play()
+    if @isOniOS
+      @videoElements.each (index, video) ->
+        video.controls = true
+    else
+      @container.on 'inview', (event, isInView, visiblePartX, visiblePartY) =>
+        console.log arguments
+
+        if isInView and visiblePartY is ("both" or "bottom")
+          @container.off('inview')
+          @videoElements.each (index, video) ->
+            $(video).on 'ended', (event) ->
+              event.currentTarget.controls = true
+              $(event.currentTarget).off('ended')
+            video.play()
 
 $ ->
   videoTheater = new VideoPolyTheater('.poly-theater')

@@ -5,4 +5,5 @@
 #= require twitter/bootstrap/alert
 #= require twitter/bootstrap/affix
 
+#= require modules/menu
 #= require modules/poly_theater

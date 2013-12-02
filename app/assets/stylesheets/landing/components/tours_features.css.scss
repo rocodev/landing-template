@@ -4,7 +4,8 @@
 .tours-features .features-list {
   width: 760px;
   margin: 40px auto 0;
-  @include columns(360px 2);
+  @include columns(2);
+  @include column-gap(percentage(40px/760px));
 
   a {
     color: inherit;
@@ -15,5 +16,15 @@
     margin-left: 1.2em;
     margin-bottom: 10px;
     display: inline-block;
+  }
+
+  @include media-bt-middle {
+    width: 720px;
+  }
+  @include media-bt-small {
+    width: 90%;
+  }
+  @include media-iphone4-landscape {
+    @include columns(1);
   }
 }
