@@ -3,8 +3,15 @@
 .poly-theater {
   @extend %section-narrow-inner;
 
-  &, .theater-content {
+  & {
     margin: 40px auto;
+  }
+
+  .theater-content {
+    margin: 0 auto;
+  }
+  .theater-desc {
+    margin-top: 40px;
   }
 
   @include media-bt-middle {
