@@ -115,7 +115,7 @@
     }
   }
 }
-@media (max-width: 900px) {
+@include media-query($max-width: 900px) {
   .pricing-table.type-a {
     max-width: 100%;
     font-size: percentage(14px/16px);

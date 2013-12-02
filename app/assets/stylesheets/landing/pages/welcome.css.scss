@@ -76,7 +76,7 @@
   }
 }
 
-@media (max-width: 560px) {
+@include media-query($max-width: 560px) {
   .page-welcome {
     .landing-get-started {
       text-align: center;
