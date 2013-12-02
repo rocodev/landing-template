@@ -1,3 +1,23 @@
+$enable-responsive: true;
+
+@mixin media-query($max-width: none, $min-width: none, $media: all) {
+  @if $enable-responsive {
+    @if ($max-width != none) and ($min-width != none) {
+      @media (min-width: $min-width) and (max-width: $max-width) {
+        @content;
+      }
+    } @else if ($max-width != none) {
+      @media (max-width: $max-width) {
+        @content;
+      }
+    } @else if ($min-width != none) {
+      @media (min-width: $min-width) {
+        @content;
+      }
+    }
+  }
+}
+
 @mixin media-bt-wide {
   @media (min-width: 1200px) {
     @content;
