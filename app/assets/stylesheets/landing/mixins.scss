@@ -8,10 +8,13 @@
 }
 
 // Mixins
-@mixin tours-figure-note($top, $line-length: 0px) {
-  top: $top;
-  &:before {
-    width: $line-length;
+@mixin tours-figure-note($top, $line-length: 0px, $relative: false, $base-height: 400px) {
+  @if $relative {
+    top: percentage($top / $base-height);
+    &:before { width: percentage($line-length / $tours-note-width); }
+  } @else {
+    top: $top;
+    &:before { width: $line-length; }
   }
 }
 

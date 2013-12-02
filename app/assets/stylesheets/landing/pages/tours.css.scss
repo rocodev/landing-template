@@ -5,16 +5,17 @@
 }
 
 .tours-content.editor-tour {
+  $main-image-height: 414px;
   .note-slug {
-    @include tours-figure-note(84px, 58px);
+    @include tours-figure-note(84px, 65px, $relative: true, $base-height: 414px);
   }
   .note-highlight {
-    @include tours-figure-note(215px, 70px);
+    @include tours-figure-note(215px, 75px, $relative: true, $base-height: 414px);
   }
   .note-in-editor {
-    @include tours-figure-note(97px, 58px);
+    @include tours-figure-note(97px, 65px, $relative: true, $base-height: 414px);
   }
   .note-in-blog {
-    @include tours-figure-note(218px, 58px);
+    @include tours-figure-note(218px, 65px, $relative: true, $base-height: 414px);
   }
 }
