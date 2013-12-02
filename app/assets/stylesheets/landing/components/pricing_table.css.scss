@@ -20,7 +20,6 @@
     width: (100% / 3); // 320px at normal
     min-height: relative-size(540px);
     padding: relative-size(20px) percentage(25px / 960px);
-    //margin-left: (270px/3); //For 2 plans
     float: left;
     box-sizing: border-box;
 
@@ -35,6 +34,10 @@
       border-width: 0 1px;
       margin: 0 -1px;
     }
+  }
+  &.duo-plan .pricing-plan {
+    width: 36%;
+    margin-left: (100% - 36%*2)/3;
   }
 
   .plan-header {
@@ -171,6 +174,10 @@
         bottom: -5px;
         @include curved-shadow-background(bottom, rgba(0,0,0,.4), transparent);
       }
+    }
+    &.duo-plan .pricing-plan {
+      width: 100%;
+      margin-left: 0;
     }
   }
 }
