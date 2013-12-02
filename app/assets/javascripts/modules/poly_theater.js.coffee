@@ -45,9 +45,7 @@ class VideoPolyTheater extends PolyTheather
       @videoElements.each (index, video) ->
         video.controls = true
     else
-      @container.on 'inview', (event, isInView, visiblePartX, visiblePartY) =>
-        console.log arguments
-
+      @container.on 'inview', '[data-theater=content]', (event, isInView, visiblePartX, visiblePartY) =>
         if isInView and visiblePartY is ("both" or "bottom")
           @container.off('inview')
           @videoElements.each (index, video) ->
