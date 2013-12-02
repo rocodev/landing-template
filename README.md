@@ -18,3 +18,7 @@ The template also tries to split styles into components and pages, making it eas
 * assets/stylesheets/landing/index.css.scss
 * assets/javascripts/landing.js.coffee
 * vendor/assets/javascripts/jquery.inview.js
+
+### Responsive Styles
+
+All responsive styles powered by media queries, are wrapped as `@mixin`s in `media_query_mixins.css.scss`. It has a variable `$enable-responsive` to determine whether to render responsive styles or not. If you don't want responsive styles, simply set it as `false`, and it will block all the media query mixins from rendering its content.
