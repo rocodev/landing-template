@@ -7,3 +7,4 @@
 
 #= require modules/menu
 #= require modules/poly_theater
+#= require modules/pricing_table
