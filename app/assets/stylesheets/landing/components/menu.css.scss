@@ -59,12 +59,12 @@
 
     &:before {
       width: $menu-padding * 1.2;
-      height: 3px;
+      height: 3px; // Will be 19px with box-shadow calculated
       background-color: $menu-fg-color;
       content: '';
       display: block;
       position: absolute;
-      top: percentage(24px / 70px);
+      top: percentage(20px / 70px);
       left: $menu-padding;
 
       box-shadow:
