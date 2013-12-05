@@ -1,10 +1,12 @@
 @import "../mixins";
+@import "compass/css3/background-size";
 
 .landing-hero {
   height: 450px;
   background: image-url("images/bkg_hero_blurred.jpg") no-repeat center center;
   margin-top: -($menu-height + 20px); // To remove the body padding;
   padding-top: $menu-height;
+  @include background-size(cover);
 
   .container {
     height: 100%;
