@@ -5,6 +5,6 @@
 #= require twitter/bootstrap/alert
 #= require twitter/bootstrap/affix
 
-#= require modules/menu
-#= require modules/poly_theater
-#= require modules/pricing_table
+#= require ./menu
+#= require ./poly_theater
+#= require ./pricing_table
