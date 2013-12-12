@@ -1,8 +1,7 @@
 Todos:
- ☐ Add <main> tag
- ☐ Create independent landing js
- ☐ Language font-size adjust
- ☐ write down locale on layout
- ☐ subpixel rendering for menu
- ☐ set menu breakpoint as variable in JS
- ☐ menu disable item transition upon breakpoint
+ ✔ Add <main> tag @done (13-12-12 15:14)
+ ✔ Create independent landing js @done (13-12-12 11:06)
+ ✘ Language font-size adjust @cancelled (13-12-12 11:13)
+ ✘ write down locale on layout @cancelled (13-12-12 11:12)
+ ✔ subpixel rendering for menu @done (13-12-12 11:54)
+ ✔ set menu breakpoint as variable in JS @done (13-12-12 15:13)
