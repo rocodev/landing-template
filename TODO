@@ -1,3 +1,8 @@
 Todos:
  ☐ Add <main> tag
  ☐ Create independent landing js
+ ☐ Language font-size adjust
+ ☐ write down locale on layout
+ ☐ subpixel rendering for menu
+ ☐ set menu breakpoint as variable in JS
+ ☐ menu disable item transition upon breakpoint
