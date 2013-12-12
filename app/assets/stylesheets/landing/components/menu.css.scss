@@ -31,9 +31,9 @@
   top: 0;
   left: 0;
   z-index: 100;
-  -webkit-font-smoothing: subpixel-antialiased;
   @include box-sizing(border-box);
   @include transition(line-height 150ms);
+  @include subpixel-rendering(off);
 
   .off-canvas-only {
     display: none;
@@ -42,6 +42,7 @@
   .brand {
     @extend %menu-item;
     font-size: 28px;
+    font-weight: 600;
     margin-left: -$menu-padding;
   }
 
@@ -97,7 +98,7 @@
 
     a {
       font-size: 20px;
-      font-weight: 300;
+      font-weight: 500;
       margin: 0 0 0 ($menu-padding * -0.5);
       @include border-radius(0);
     }
