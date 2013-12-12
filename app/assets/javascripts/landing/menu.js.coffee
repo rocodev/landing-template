@@ -8,6 +8,7 @@ class LandingMenu
       $menuToggle: @container.find('.menu-toggle')
     }
     @inOffCanvasMenu = false
+    @breakPoint = 600
 
     @init()
     @bindEvents()
@@ -36,9 +37,9 @@ class LandingMenu
     @inOffCanvasMenu = false
 
   toggleOffCanvasMenu: (initDelay = 0) ->
-    if window.innerWidth > 600 and @inOffCanvasMenu
+    if window.innerWidth > @breakPoint and @inOffCanvasMenu
       @disableOffCanvasMenu()
-    else if window.innerWidth <= 600 and !@inOffCanvasMenu
+    else if window.innerWidth <= @breakPoint and !@inOffCanvasMenu
       setTimeout =>
         @initOffCanvasMenu()
       , initDelay
