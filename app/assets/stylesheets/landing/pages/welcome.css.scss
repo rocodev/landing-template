@@ -55,6 +55,9 @@
       width: 100%;
       height: ($section-narrow-width * 692 / 1134);
 
+      @include media-bt-middle-only {
+        height: (640px * 692 / 1134);
+      }
       @include media-bt-small {
         height: (520px * 692 / 1134);
       }

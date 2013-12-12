@@ -14,7 +14,7 @@
     margin-top: 40px;
   }
 
-  @include media-bt-middle {
+  @include media-bt-middle-only {
     width: relative-size(640px, 724px, 100%);
   }
 }
